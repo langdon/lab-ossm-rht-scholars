@@ -7,7 +7,7 @@
     <link rel="canonical" href="https://redhat-scholars.github.io/course-template/template-tutorial/01-setup.html">
     <link rel="prev" href="index.html">
     <link rel="next" href="02-deploy.html">
-    <meta name="generator" content="Antora 2.3.3">
+    <meta name="generator" content="Antora 2.3.4">
     <link rel="stylesheet" href="../_/css/site.css">
 <link rel="icon" href="../_/img/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -138,173 +138,253 @@
 <h2 id="prerequisite"><a class="anchor" href="#prerequisite"></a>Prerequisite CLI tools</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>&lt;?xml version="1.0" encoding="utf-8"?&gt;
-&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
- "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;
-&lt;html&gt;
-  &lt;head&gt;
-    &lt;title&gt;503 first byte timeout&lt;/title&gt;
-  &lt;/head&gt;
-  &lt;body&gt;
-    &lt;h1&gt;Error 503 first byte timeout&lt;/h1&gt;
-    &lt;p&gt;first byte timeout&lt;/p&gt;
-    &lt;h3&gt;Guru Mediation:&lt;/h3&gt;
-    &lt;p&gt;Details: cache-ewr18166-EWR 1599752706 3331121576&lt;/p&gt;
-    &lt;hr&gt;
-    &lt;p&gt;Varnish cache server&lt;/p&gt;
-  &lt;/body&gt;
-&lt;/html&gt;</p>
+<p>The following CLI tools are required for running the exercises in this tutorial.
+Please have them installed and configured before you get started with any of the tutorial chapters.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Tool</strong></th>
+<th class="tableblock halign-center valign-top"><strong>macOS</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Fedora</strong></th>
+<th class="tableblock halign-center valign-top"><strong>windows</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The following CLI tools are optional for running the exercises in this tutorial.
-Although they are used in the tutorial, you could use others without any problem.</p>
-<p class="tableblock">[cols="4*^,4*.",options="header,+attributes"]</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>Git</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://git-scm.com/download/mac">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://git-scm.com/download/linux">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://git-scm.com/download/win">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>Docker</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://docs.docker.com/docker-for-mac/install">Docker for Mac</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>dnf install docker</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://docs.docker.com/docker-for-windows/install">Docker for Windows</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>VirtualBox</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://download.virtualbox.org/virtualbox/6.1.6/VirtualBox-6.1.6-137129-OSX.dmg">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://www.virtualbox.org/wiki/Linux_Downloads">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://download.virtualbox.org/virtualbox/6.1.6/VirtualBox-6.1.6-137129-Win.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://kubernetes.io/docs/tasks/tools/install-minikube">Minikube</a> v1.12.1</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/kubernetes/minikube/releases/download/v1.12.1/minikube-darwin-amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/kubernetes/minikube/releases/download/v1.12.1/minikube-linux-amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/kubernetes/minikube/releases/download/v1.12.1/minikube-windows-amd64.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>kubectl v1.18.6</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/darwin/amd64/kubectl">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/linux/amd64/kubectl">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://storage.googleapis.com/kubernetes-release/release/v1.18.6/bin/windows/amd64/kubectl.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/wercker/stern">stern</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>brew install stern</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/wercker/stern/releases/download/1.6.0/stern_linux_amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/wercker/stern/releases/download/1.11.0/stern_windows_amd64.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>Apache Maven 3.6.3</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://archive.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz">Download</a></p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>|<strong>Tool</strong>|<strong>macOS</strong>|<strong>Fedora</strong>|<strong>windows</strong></p>
-</div>
-<div class="paragraph">
-<p>| <a href="https://github.com/mikefarah/yq">yq v2.4.1</a>
-| <a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_darwin_amd64">Download</a>
-| <a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_linux_amd64">Download</a>
-| <a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_windows_amd64.exe">Download</a></p>
-</div>
-<div class="paragraph">
-<p>| <a href="https://github.com/stedolan/jq">jq v1.6.0</a>
-| <a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64">Download</a>
-| <a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64">Download</a>
-| <a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe">Download</a></p>
-</div>
-<div class="paragraph">
-<p>| <a href="https://httpie.org/">httpie</a>
-| <code>brew install httpie</code>
-| <code>dnf install httpie</code>
-| <a href="https://httpie.org/doc#windows-etc" class="bare">https://httpie.org/doc#windows-etc</a></p>
-</div>
-<div class="paragraph">
-<p>| watch
-| <code>brew install watch</code>
-| <code>dnf install procps-ng</code>
-|</p>
-</div>
-<div class="paragraph">
-<p>| kubectx and kubens
-| <code>brew install kubectx</code>
-| <a href="https://github.com/ahmetb/kubectx" class="bare">https://github.com/ahmetb/kubectx</a>
-|</p>
-</div>
-<div class="paragraph">
-<p>| <a href="https://github.com/rakyll/hey">hey</a>
-| <code>brew install hey</code>
-| <a href="https://storage.googleapis.com/jblabs/dist/hey_linux_v0.1.2">Download</a>
-| <a href="https://storage.googleapis.com/jblabs/dist/hey_win_v0.1.2.exe">Download</a></p>
+<p>The following CLI tools are optional for running the exercises in this tutorial.
+Although they are used in the tutorial, you could use others without any problem.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
-<col style="width: 100%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
+<col style="width: 25%;">
 </colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top"><strong>Tool</strong></th>
+<th class="tableblock halign-center valign-top"><strong>macOS</strong></th>
+<th class="tableblock halign-center valign-top"><strong>Fedora</strong></th>
+<th class="tableblock halign-center valign-top"><strong>windows</strong></th>
+</tr>
+</thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">[#minikube]
-== Setup Kubernetes</p>
-<p class="tableblock">:profile: my_profile</p>
-<p class="tableblock">The profile {profile} is created to run the tutorial:</p>
-<p class="tableblock">[tabs, subs="attributes+,macros"]
-====
-Minikube::
-+
---
-Having `minikube` installed and in your `PATH`, then run:</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-minikube start --memory=8192 --cpus=3 --kubernetes-version={kubernetes-version} --vm-driver=virtualbox -p {profile}
-----</p>
-<p class="tableblock">And the output must be something similar like:</p>
-<p class="tableblock">[.console-output]
-[source,bash,subs="attributes,macros"]
-----
-❌  profile "{profile}" not found
-✅  Created a new profile : {profile}
-✅  minikube profile was successfully set to {profile}
-😄  [default] minikube {minikube-version} on Darwin 10.15.2
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/mikefarah/yq">yq v2.4.1</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_darwin_amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_linux_amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/mikefarah/yq/releases/download/2.4.1/yq_windows_amd64.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/stedolan/jq">jq v1.6.0</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-osx-amd64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/stedolan/jq/releases/download/jq-1.6/jq-win64.exe">Download</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://httpie.org/">httpie</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>brew install httpie</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>dnf install httpie</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://httpie.org/doc#windows-etc" class="bare">https://httpie.org/doc#windows-etc</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">watch</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>brew install watch</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>dnf install procps-ng</code></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock">kubectx and kubens</p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>brew install kubectx</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/ahmetb/kubectx" class="bare">https://github.com/ahmetb/kubectx</a></p></td>
+<td class="tableblock halign-center valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://github.com/rakyll/hey">hey</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><code>brew install hey</code></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://storage.googleapis.com/jblabs/dist/hey_linux_v0.1.2">Download</a></p></td>
+<td class="tableblock halign-center valign-top"><p class="tableblock"><a href="https://storage.googleapis.com/jblabs/dist/hey_win_v0.1.2.exe">Download</a></p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="minikube"><a class="anchor" href="#minikube"></a>Setup Kubernetes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The profile my_profile is created to run the tutorial:</p>
+</div>
+<div class="tabset is-loading">
+<div class="ulist tabs">
+<ul>
+<li>
+<p><a id="tabset1_minikube"></a>Minikube</p>
+</li>
+<li>
+<p><a id="tabset1_openshift"></a>OpenShift</p>
+</li>
+</ul>
+</div>
+<div class="content">
+<div class="tab-pane" aria-labelledby="tabset1_minikube">
+<div class="paragraph">
+<p>Having <code>minikube</code> installed and in your <code>PATH</code>, then run:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">minikube start --memory=8192 --cpus=3 --kubernetes-version=v1.18.6 --vm-driver=virtualbox -p my_profile</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the output must be something similar like:</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">❌  profile "my_profile" not found
+✅  Created a new profile : my_profile
+✅  minikube profile was successfully set to my_profile
+😄  [default] minikube v1.12.1 on Darwin 10.15.2
 ✨  Selecting 'virtualbox' driver from user configuration (alternates: [hyperkit])
 🔥  Creating virtualbox VM (CPUs=2, Memory=8192MB, Disk=50000MB) ...
-🐳  Preparing Kubernetes {kubernetes-version} on Docker '19.03.5' ...
+🐳  Preparing Kubernetes v1.18.6 on Docker '19.03.5' ...
     ▪ apiserver.enable-admission-plugins=LimitRanger,NamespaceExists,NamespaceLifecycle,ResourceQuota,ServiceAccount,DefaultStorageClass,MutatingAdmissionWebhook
 🚜  Pulling images ...
 🚀  Launching Kubernetes ...
 ⌛  Waiting for cluster to come online ...
-🏄  Done! kubectl is now configured to use "{profile}"
-----</p>
-<p class="tableblock">Finally configure to use minikube internal docker as docker host:</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-eval $(minikube docker-env -p {profile})
-----
---
-OpenShift::
-+
---
-To run OpenShift4, you need to have one provisioned using https://try.openshift.com[try.openshift.com] or can use any existing OpenShift4 cluster.
-Once you have your cluster, you can download the latest OpenShift client(oc) from https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/[here] and add to your path.</p>
-<p class="tableblock">----
-oc version
-----</p>
-<p class="tableblock">You can check the OpenShift version using:</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-oc version
-----</p>
-<p class="tableblock">The output should show oc version &gt;=4.2:</p>
-<p class="tableblock">[.console-output]
-[source,bash,subs="attributes,macros"]
-----
-Client Version: openshift-clients-4.3.0-201910250623-88-g6a937dfe
-Kubernetes Version: {kubernetes-version}
-----</p>
-<p class="tableblock">Then login into the cluster and run:</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-oc new-project {profile}
-----
---
-====</p>
-<p class="tableblock">And then you are ready for start using Kubernetes:</p>
-<p class="tableblock">image::kubelogo.png[]</p>
-<p class="tableblock">[#downloadtutorial]
-== Get tutorial sources</p>
-<p class="tableblock">:tutorial-url: https://github.com/redhat-developer-demos/rhd-tutorial-common.git
-:folder: my_folder
-Before we start setting up the environment, let’s clone the tutorial sources and set the `TUTORIAL_HOME` environment variable to point to the root directory of the tutorial:</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-git clone {tutorial-url} {folder}
-----</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,macros"]
-----
-export TUTORIAL_HOME="$(pwd)/{folder}"
-----</p>
-<p class="tableblock">[.console-input]
-[source,bash,subs="attributes,+macros"]
-----
-cd $TUTORIAL_HOME
-----</p></td>
-</tr>
-</tbody>
-</table>
+🏄  Done! kubectl is now configured to use "my_profile"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Finally configure to use minikube internal docker as docker host:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">eval $(minikube docker-env -p my_profile)</code></pre>
+</div>
+</div>
+</div>
+<div class="tab-pane" aria-labelledby="tabset1_openshift">
+<div class="paragraph">
+<p>To run OpenShift4, you need to have one provisioned using <a href="https://try.openshift.com">try.openshift.com</a> or can use any existing OpenShift4 cluster.
+Once you have your cluster, you can download the latest OpenShift client(oc) from <a href="https://mirror.openshift.com/pub/openshift-v4/clients/ocp/latest/">here</a> and add to your path.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>oc version</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can check the OpenShift version using:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc version</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output should show oc version &gt;=4.2:</p>
+</div>
+<div class="listingblock console-output">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">Client Version: openshift-clients-4.3.0-201910250623-88-g6a937dfe
+Kubernetes Version: v1.18.6</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then login into the cluster and run:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">oc new-project my_profile</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>And then you are ready for start using Kubernetes:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="_images/kubelogo.png" alt="kubelogo">
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="downloadtutorial"><a class="anchor" href="#downloadtutorial"></a>Get tutorial sources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before we start setting up the environment, let’s clone the tutorial sources and set the <code>TUTORIAL_HOME</code> environment variable to point to the root directory of the tutorial:</p>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">git clone <a href="https://github.com/redhat-developer-demos/rhd-tutorial-common.git" class="bare">https://github.com/redhat-developer-demos/rhd-tutorial-common.git</a> my_folder</code></pre>
+</div>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">export TUTORIAL_HOME="$(pwd)/my_folder"</code></pre>
+</div>
+</div>
+<div class="listingblock console-input">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">cd $TUTORIAL_HOME</code></pre>
+</div>
+</div>
 </div>
 </div>
 <nav class="pagination">
