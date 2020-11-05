@@ -1,0 +1,22 @@
+FROM fedora-minimal
+
+RUN microdnf install -y npm nodejs
+RUN mkdir /opt/workshop
+RUN npm install --global gulp-cli
+
+ADD * /opt/workshop
+ADD preview-tools/run-server.sh /usr/local/bin/
+
+#WORKDIR /tmp/
+
+WORKDIR /opt/workshop
+RUN npm install
+
+VOLUME /opt/workshop
+
+EXPOSE 3000
+EXPOSE 3001
+
+ENTRYPOINT [ "/usr/local/bin/run-server.sh" ]
+#ENTRYPOINT [ "/opt/workshop/previewrun-server.sh" ]
+#ENTRYPOINT [ "/usr/local/bin/gulp" ]
